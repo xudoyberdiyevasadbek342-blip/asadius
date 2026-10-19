@@ -1,0 +1,14 @@
+name: diag
+on: workflow_dispatch
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in \
+            "https://image.pollinations.ai/prompt/medieval%20castle?width=576&height=1024&nologo=true" \
+            "https://image.pollinations.ai/prompt/medieval%20castle?width=576&height=1024&nologo=true&model=flux" \
+            "https://gen.pollinations.ai/image/medieval%20castle?width=576&height=1024" ; do
+            r=$(curl -s -o body -w "%{http_code} %{size_download} %{content_type} %{time_total}" --max-time 120 "$u")
+            echo "::warning::$u => $r $(head -c 200 body | tr -dc '[:print:]')"
+          done
