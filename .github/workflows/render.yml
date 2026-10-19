@@ -31,8 +31,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Emoji shriftini o'rnatish
-        run: sudo apt-get update && sudo apt-get install -y fonts-noto-color-emoji
+      - name: Emoji shrifti va ffmpeg o'rnatish
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-color-emoji ffmpeg
 
       - run: npm ci
       - run: pip install -r scripts/requirements.txt
