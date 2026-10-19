@@ -12,6 +12,7 @@ import json
 import subprocess
 import sys
 import time
+import traceback
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -72,7 +73,7 @@ def make_image(prompt: str, seed: int, path: Path) -> bool:
                 path.write_bytes(data)
                 return True
         except Exception as e:  # noqa: BLE001
-            print(f"   rasm xatosi ({attempt + 1}/5): {e}")
+            print(f"::warning::rasm xatosi ({attempt + 1}/5): {e}")
         time.sleep(15 * (attempt + 1))
     return False
 
@@ -100,6 +101,8 @@ async def prepare(reel_file: Path):
         img = out_dir / f"s{i}-{img_key}.jpg"
         has_image = make_image(f"{scene['image']}, {style}", 1000 + i, img)
         print(f"   sahna {i + 1}: ovoz ✅  rasm {'✅' if has_image else '❌'}")
+        if not has_image:
+            print(f"::warning::{name}: {i + 1}-sahna rasmi chizilmadi")
 
         scenes.append({
             "text": scene["text"],
@@ -129,4 +132,10 @@ async def main():
         await prepare(f)
 
 
-asyncio.run(main())
+try:
+    asyncio.run(main())
+except Exception as e:  # noqa: BLE001
+    traceback.print_exc()
+    # GitHub sahifasida xato sababi ko'rinishi uchun
+    print(f"::error::{type(e).__name__}: {e}")
+    sys.exit(1)
