@@ -14,5 +14,7 @@ export type ReelProps = {
   handle?: string;
   // public/ papkasidagi musiqa fayli nomi (ixtiyoriy), masalan "musiqa.mp3"
   music?: string;
+  // Instagram uchun izoh va hashtaglar (videoga chiqmaydi)
+  caption?: string;
   slides: Slide[];
 };

@@ -1,0 +1,14 @@
+{
+  "theme": "olov",
+  "handle": "@asadius_",
+  "caption": "Ikki buyuk hukmdorning maktublari jang bilan tugadi ⚔️ Anqara jangi qanday boshlangan edi? 📜\n\n#amirtemur #boyazid #anqarajangi #tarix #ozbekiston #tarixiyfaktlar #reels",
+  "slides": [
+    { "emoji": "📜", "text": "Jang maktubdan boshlangan edi", "seconds": 2.5 },
+    { "emoji": "🏰", "text": "Temurdan qochgan hukmdorlar Boyazid huzuridan panoh topdi", "seconds": 4 },
+    { "emoji": "✉️", "text": "Temur maktub yozib, ularni qaytarishni talab qildi", "seconds": 3.5 },
+    { "emoji": "😤", "text": "Boyazid haqoratli javob yozdi va jangga chaqirdi", "seconds": 3.5 },
+    { "emoji": "⚔️", "text": "1402-yil, Anqara yaqinida ikki qo'shin to'qnashdi", "seconds": 3.5 },
+    { "emoji": "👑", "text": "Natija: Boyazid mag'lub bo'ldi va asirga tushdi", "seconds": 3.5 },
+    { "emoji": "👉", "text": "Davomi keyingi videoda!", "seconds": 2.5 }
+  ]
+}
