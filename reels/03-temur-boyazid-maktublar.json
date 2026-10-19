@@ -1,14 +1,37 @@
 {
-  "theme": "olov",
+  "title": "Anqara jangi qanday boshlangan?",
   "handle": "@asadius_",
+  "voice": "uz-UZ-SardorNeural",
+  "rate": "+5%",
   "caption": "Ikki buyuk hukmdorning maktublari jang bilan tugadi ⚔️ Anqara jangi qanday boshlangan edi? 📜\n\n#amirtemur #boyazid #anqarajangi #tarix #ozbekiston #tarixiyfaktlar #reels",
-  "slides": [
-    { "emoji": "📜", "text": "Jang maktubdan boshlangan edi", "seconds": 2.5 },
-    { "emoji": "🏰", "text": "Temurdan qochgan hukmdorlar Boyazid huzuridan panoh topdi", "seconds": 4 },
-    { "emoji": "✉️", "text": "Temur maktub yozib, ularni qaytarishni talab qildi", "seconds": 3.5 },
-    { "emoji": "😤", "text": "Boyazid haqoratli javob yozdi va jangga chaqirdi", "seconds": 3.5 },
-    { "emoji": "⚔️", "text": "1402-yil, Anqara yaqinida ikki qo'shin to'qnashdi", "seconds": 3.5 },
-    { "emoji": "👑", "text": "Natija: Boyazid mag'lub bo'ldi va asirga tushdi", "seconds": 3.5 },
-    { "emoji": "👉", "text": "Davomi keyingi videoda!", "seconds": 2.5 }
+  "scenes": [
+    {
+      "text": "Tarixdagi eng katta janglardan biri bitta maktubdan boshlangan edi.",
+      "image": "medieval rolled letter with red wax seal on an old wooden table, candlelight, dark background"
+    },
+    {
+      "text": "Temurdan qochgan hukmdorlar Usmonli sultoni Boyazid saroyidan panoh topdi.",
+      "image": "fugitive medieval nobles arriving on horseback at the gates of an Ottoman palace, evening"
+    },
+    {
+      "text": "Temur Boyazidga maktub yo'llab, ularni qaytarishni talab qildi.",
+      "image": "Central Asian emperor in a large tent dictating a letter to a scribe writing on a scroll"
+    },
+    {
+      "text": "Ammo Boyazid haqoratli javob yozib, Temurni jangga chaqirdi.",
+      "image": "furious Ottoman sultan in a throne room crumpling a letter, guards in the background"
+    },
+    {
+      "text": "1402-yilning yozida Anqara yaqinida ikki qo'shin to'qnashdi.",
+      "image": "epic medieval battle, cavalry charge, war elephants, arrows in the sky, dust and smoke"
+    },
+    {
+      "text": "Kechga borib Boyazid mag'lub bo'ldi va o'zi asirga tushdi.",
+      "image": "defeated Ottoman sultan surrounded by horsemen on a battlefield at dusk, red sky"
+    },
+    {
+      "text": "Asirlikda u Temur bilan qanday suhbat qurgan? Bu haqda keyingi videoda. Obuna bo'ling!",
+      "image": "grand medieval royal tent at night lit by torches, guards standing outside"
+    }
   ]
 }

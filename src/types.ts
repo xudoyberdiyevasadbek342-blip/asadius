@@ -7,6 +7,17 @@ export type Slide = {
   seconds?: number;
 };
 
+export type Word = { text: string; start: number; end: number };
+
+// scripts/prepare.py tayyorlagan AI sahna
+export type Scene = {
+  text: string;
+  audio: string;
+  image: string | null;
+  words: Word[];
+  seconds: number;
+};
+
 export type ReelProps = {
   // Rang mavzusi: "binafsha", "kok", "olov", "yashil", "tun"
   theme?: string;
@@ -16,5 +27,10 @@ export type ReelProps = {
   music?: string;
   // Instagram uchun izoh va hashtaglar (videoga chiqmaydi)
   caption?: string;
-  slides: Slide[];
+  // Birinchi sahnada yuqorida chiqadigan sarlavha (ixtiyoriy)
+  title?: string;
+  // Oddiy matnli video uchun
+  slides?: Slide[];
+  // AI ovozli video uchun
+  scenes?: Scene[];
 };

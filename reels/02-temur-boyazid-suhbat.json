@@ -1,16 +1,37 @@
 {
-  "theme": "tun",
+  "title": "Temur nega kuldi?",
   "handle": "@asadius_",
-  "caption": "Amir Temur nega kuldi? 🤔 1402-yil, Anqara jangidan keyin bo'lgan mashhur suhbat (tarixiy rivoyat). Siz bu javobga nima deysiz? 👇\n\n#amirtemur #temur #boyazid #tarix #ozbekiston #uzbekistan #tarixiyfaktlar #reels",
-  "slides": [
-    { "emoji": "⚔️", "text": "1402-yil. Anqara jangi", "seconds": 2.5 },
-    { "emoji": "👑", "text": "Amir Temur Usmonli sultoni Boyazidni asir oldi", "seconds": 3.5 },
-    { "emoji": "😄", "text": "Boyazid huzurga keltirilganda Temur kulib yubordi", "seconds": 3.5 },
-    { "emoji": "😠", "text": "Boyazid: \"Baxtsizligimga kulma! Mulkni beruvchi ham, oluvchi ham Xudodir\"", "seconds": 4.5 },
-    { "emoji": "🤔", "text": "Temur: \"Men senga kulmadim...\"", "seconds": 2.5 },
-    { "emoji": "🌍", "text": "\"Xudo bu dunyo saltanatini sendek bir ko'zli va mendek bir oqsoqqa bergan ekan...\"", "seconds": 5 },
-    { "emoji": "💡", "text": "\"...demak, dunyo mulki Uning nazdida qanchalik arzimas ekan!\"", "seconds": 4.5 },
-    { "emoji": "📜", "text": "Tarixiy rivoyat", "seconds": 2 },
-    { "emoji": "👉", "text": "Obuna bo'ling — tarix davom etadi!", "seconds": 2.5 }
+  "voice": "uz-UZ-SardorNeural",
+  "rate": "+5%",
+  "caption": "Amir Temur nega kuldi? 🤔 1402-yil, Anqara jangidan keyingi mashhur suhbat (tarixiy rivoyat). Siz bu javobga nima deysiz? 👇\n\n#amirtemur #temur #boyazid #tarix #ozbekiston #uzbekistan #tarixiyfaktlar #reels",
+  "scenes": [
+    {
+      "text": "1402-yil. Anqara yaqinida ikki buyuk hukmdor, Amir Temur va Usmonli sultoni Boyazid yuzma-yuz keldi.",
+      "image": "two massive medieval armies facing each other on a vast plain, countless banners, dust clouds, golden sunset"
+    },
+    {
+      "text": "Jang Temurning g'alabasi bilan tugadi. Boyazid asirga olindi.",
+      "image": "defeated Ottoman sultan in ornate armor and turban captured by soldiers on a smoky battlefield"
+    },
+    {
+      "text": "Asir sultonni Temurning chodiriga olib kelishdi. Uni ko'rgan Temur birdan kulib yubordi.",
+      "image": "old Central Asian conqueror with grey beard and white turban sitting on a throne inside a grand embroidered tent, slight smile"
+    },
+    {
+      "text": "Boyazid g'azablandi: Baxtsizligimga kulma, Temur! Saltanatni beruvchi ham, oluvchi ham Xudodir.",
+      "image": "proud Ottoman sultan with large turban, angry expression, standing in chains inside a royal tent, candlelight"
+    },
+    {
+      "text": "Temur sokin javob berdi: Men senga kulmadim. Xudo bu dunyo saltanatini sendek bir ko'zli va mendek bir oqsoqqa bergan ekan.",
+      "image": "close-up portrait of a wise old Central Asian emperor with grey beard, calm thoughtful face, warm golden light"
+    },
+    {
+      "text": "Demak, dunyo mulki Uning nazdida naqadar arzimas ekan.",
+      "image": "golden crown lying in the sand of an empty desert at dusk, symbolic, wind blowing sand"
+    },
+    {
+      "text": "Bu tarixiy rivoyat. Sizningcha, Temur haqmidi? Fikringizni izohda yozing va obuna bo'ling.",
+      "image": "silhouette of a lone medieval horseman on a hill above an ancient Central Asian city with turquoise domes at sunset"
+    }
   ]
 }

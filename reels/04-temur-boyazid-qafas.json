@@ -1,14 +1,37 @@
 {
-  "theme": "binafsha",
+  "title": "Temir qafas: afsonami yoki haqiqat?",
   "handle": "@asadius_",
+  "voice": "uz-UZ-SardorNeural",
+  "rate": "+5%",
   "caption": "Temur Boyazidni temir qafasga solganmi? 🤔 Afsona va haqiqat. Siz qaysi birini eshitgansiz? 👇\n\n#amirtemur #boyazid #tarix #afsona #ozbekiston #tarixiyfaktlar #reels",
-  "slides": [
-    { "emoji": "❓", "text": "Temur Boyazidni temir qafasga solganmi?", "seconds": 3 },
-    { "emoji": "📚", "text": "Bu afsona keyinchalik Yevropada juda mashhur bo'ldi", "seconds": 3.5 },
-    { "emoji": "🔍", "text": "Lekin Temur saroyi tarixchisi Sharafuddin Ali Yazdiy boshqacha yozadi", "seconds": 4.5 },
-    { "emoji": "🤝", "text": "Temur asir sultonni hurmat bilan kutib olgan", "seconds": 3.5 },
-    { "emoji": "🪟", "text": "\"Qafas\" aslida panjarali tahtiravon bo'lgan bo'lishi mumkin", "seconds": 4 },
-    { "emoji": "🕯️", "text": "Boyazid 1403-yilda asirlikda vafot etdi", "seconds": 3 },
-    { "emoji": "👉", "text": "Yana qaysi mavzu kerak? Izohda yozing!", "seconds": 2.5 }
+  "scenes": [
+    {
+      "text": "Aytishlaricha, Amir Temur asir Boyazidni temir qafasga solib olib yurgan.",
+      "image": "medieval iron cage on a wooden cart in fog, dramatic dark mood"
+    },
+    {
+      "text": "Bu hikoya keyinchalik Yevropada juda mashhur bo'ldi va hatto teatr sahnalariga ham chiqdi.",
+      "image": "Renaissance era theater stage with actors in oriental costumes, 16th century England, candle lights"
+    },
+    {
+      "text": "Lekin Temur saroyi tarixchisi Sharafuddin Ali Yazdiy boshqacha yozadi.",
+      "image": "medieval Persian historian writing a manuscript by oil lamp, books and scrolls around"
+    },
+    {
+      "text": "Unga ko'ra, Temur asir sultonni hurmat bilan qabul qilgan va unga izzat ko'rsatgan.",
+      "image": "Central Asian emperor respectfully greeting an Ottoman sultan inside a luxurious tent, carpets and lanterns"
+    },
+    {
+      "text": "Ba'zi tarixchilar qafas aslida panjarali tahtiravon bo'lgan, deb hisoblaydi.",
+      "image": "ornate wooden latticed palanquin carried between two horses on a desert road, medieval"
+    },
+    {
+      "text": "Boyazid 1403-yilning bahorida asirlikda vafot etdi.",
+      "image": "single candle burning out in a dark stone room, melancholic atmosphere"
+    },
+    {
+      "text": "Siz qaysi biriga ishonasiz? Izohda yozing va obuna bo'ling!",
+      "image": "medieval turquoise-domed mausoleum in Samarkand at golden hour"
+    }
   ]
 }

@@ -6,31 +6,47 @@ Dasturlashni bilish shart emas: siz faqat matn yozasiz, video GitHub'ning o'zida
 ## Qanday ishlaydi?
 
 1. `reels/` papkasida har bir video uchun bitta `.json` fayl bor.
-2. Siz faylni yaratasiz yoki o'zgartirasiz va **Commit changes** tugmasini bosasiz.
-3. GitHub avtomatik ravishda videoni yasaydi (2–4 daqiqa).
-4. Tayyor `.mp4` faylni yuklab olib, Instagram'ga joylaysiz.
+2. Siz faylga **ovoz matnini** va har bir sahna uchun **rasm tavsifini** yozasiz.
+3. GitHub avtomatik ravishda:
+   - 🎙️ matnni **AI o'zbekcha ovoz** bilan o'qitadi (Microsoft Edge TTS, bepul);
+   - 🎨 har bir sahna uchun **AI rasm** chizadi (Pollinations, bepul);
+   - 🎬 rasmlarni kinematik harakat, so'zma-so'z sariq subtitr va ovoz bilan videoga yig'adi.
+4. 3–6 daqiqadan keyin tayyor `.mp4` faylni yuklab olasiz.
 
-## Yangi video yasash (brauzerda, qadamma-qadam)
+## Yangi video yasash (brauzerda)
 
-1. GitHub'da `reels` papkasini oching.
-2. **Add file → Create new file** tugmasini bosing.
-3. Fayl nomini yozing, masalan: `02-motivatsiya.json`
-4. Ichiga quyidagini qo'ying va matnlarni o'zgartiring:
+1. GitHub'da `reels` papkasini oching → **Add file → Create new file**.
+2. Fayl nomi: masalan `05-ulugbek.json`
+3. Ichiga yozing:
 
 ```json
 {
-  "theme": "olov",
+  "title": "Ulug'bek osmonni qanday o'lchagan?",
   "handle": "@asadius_",
-  "slides": [
-    { "emoji": "🔥", "text": "Bugun boshlang!", "seconds": 2 },
-    { "emoji": "💪", "text": "Har kuni 1% yaxshilaning", "seconds": 3 },
-    { "emoji": "🚀", "text": "1 yilda 37 barobar kuchli bo'lasiz", "seconds": 3 },
-    { "emoji": "👉", "text": "Saqlab qo'ying va do'stingizga yuboring!", "seconds": 3 }
+  "voice": "uz-UZ-SardorNeural",
+  "rate": "+5%",
+  "caption": "Instagram uchun izoh va #hashtaglar",
+  "scenes": [
+    {
+      "text": "Ovoz o'qiydigan birinchi gap.",
+      "image": "rasm tavsifi inglizcha, masalan: medieval observatory in Samarkand at night, stars"
+    },
+    {
+      "text": "Ikkinchi gap.",
+      "image": "keyingi rasm tavsifi"
+    }
   ]
 }
 ```
 
-5. Pastdagi yashil **Commit changes** tugmasini bosing.
+4. **Commit changes** ni bosing.
+
+**Maslahat:** rasm tavsifini (`image`) **inglizcha** yozing, AI uni yaxshiroq tushunadi. Yozib berishni Claude'dan so'rashingiz ham mumkin.
+
+**Ovozlar:** `uz-UZ-SardorNeural` (erkak), `uz-UZ-MadinaNeural` (ayol). `rate` tezlikni belgilaydi: `"+10%"` bo'lsa tezroq, `"-10%"` bo'lsa sekinroq.
+
+**Rasm yoqmadimi?** Sahnaning `image` tavsifini biroz o'zgartiring. Faqat o'sha rasm qaytadan chiziladi.
+Tayyor ovoz va rasmlar `public/gen/` papkasida saqlanadi.
 
 ## Tayyor videoni yuklab olish
 
@@ -43,10 +59,13 @@ Dasturlashni bilish shart emas: siz faqat matn yozasiz, video GitHub'ning o'zida
 
 | Maydon | Nima qiladi | Misol |
 |---|---|---|
-| `theme` | Fon rangi | `binafsha`, `kok`, `olov`, `yashil`, `tun` |
+| `title` | Boshida yuqorida chiqadigan sarlavha | `Temur nega kuldi?` |
+| `voice` | AI ovoz | `uz-UZ-SardorNeural` |
+| `scenes` | Sahnalar: `text` (ovoz) + `image` (rasm tavsifi) | — |
+| `theme` | Fon rangi (faqat oddiy `slides` videolar uchun) | `binafsha`, `kok`, `olov`, `yashil`, `tun` |
 | `handle` | Pastdagi yozuv | `@asadius_` |
 | `music` | Fon musiqasi (ixtiyoriy) | `musiqa.mp3` |
-| `slides` | Ekranlar ro'yxati | — |
+| `slides` | Oddiy matnli ekranlar (ovozsiz, eski format) | — |
 | `emoji` | Katta emoji (ixtiyoriy) | `🔥` |
 | `text` | Ekrandagi matn | `Bilasizmi?` |
 | `seconds` | Necha soniya turadi | `3` |
@@ -65,9 +84,11 @@ Dasturlashni bilish shart emas: siz faqat matn yozasiz, video GitHub'ning o'zida
 
 ```bash
 npm install
+pip install -r scripts/requirements.txt
+python scripts/prepare.py   # AI ovoz va rasmlar
 npm run studio          # brauzerda jonli ko'rish va tahrirlash
 npm run render          # reels/ dagi hamma videolarni out/ papkasiga yasash
-npm run render -- 01-namuna   # faqat bittasini yasash
+npm run render -- 02-temur-boyazid-suhbat   # faqat bittasini
 ```
 
 Loyiha [Remotion](https://www.remotion.dev) asosida qurilgan (shaxsiy foydalanish uchun bepul).

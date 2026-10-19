@@ -9,6 +9,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { fontFamily } from "./font";
+import { Cinematic, sceneFrames } from "./Cinematic";
 import type { ReelProps, Slide } from "./types";
 
 export const FPS = 30;
@@ -26,7 +27,12 @@ const slideFrames = (slide: Slide) =>
   Math.round((slide.seconds ?? DEFAULT_SECONDS) * FPS);
 
 export const reelDuration = (props: ReelProps) =>
-  Math.max(1, props.slides.reduce((sum, s) => sum + slideFrames(s), 0));
+  Math.max(
+    1,
+    props.scenes
+      ? props.scenes.reduce((sum, s) => sum + sceneFrames(s, FPS), 0)
+      : (props.slides ?? []).reduce((sum, s) => sum + slideFrames(s), 0),
+  );
 
 const Background = ({ theme }: { theme: string }) => {
   const frame = useCurrentFrame();
@@ -119,11 +125,12 @@ const ProgressBar = () => {
 };
 
 export const Reel = (props: ReelProps) => {
+  if (props.scenes) return <Cinematic {...props} />;
   let from = 0;
   return (
     <AbsoluteFill>
       <Background theme={props.theme ?? "binafsha"} />
-      {props.slides.map((slide, i) => {
+      {(props.slides ?? []).map((slide, i) => {
         const start = from;
         from += slideFrames(slide);
         return (
