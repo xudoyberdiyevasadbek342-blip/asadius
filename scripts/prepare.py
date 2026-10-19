@@ -57,24 +57,30 @@ async def make_voice(text: str, voice: str, rate: str, mp3: Path, words_file: Pa
     words_file.write_text(json.dumps(words, ensure_ascii=False))
 
 
+IMAGE_INTERVAL = 47  # bepul tarif: har 45 soniyada 1 ta rasm
+_last_image_request = 0.0
+
+
 def make_image(prompt: str, seed: int, path: Path) -> bool:
+    global _last_image_request
     if path.exists():
         return True
-    query = urllib.parse.urlencode(
-        {"width": 1080, "height": 1920, "seed": seed, "nologo": "true", "model": "flux"}
-    )
+    query = urllib.parse.urlencode({"width": 1080, "height": 1920, "seed": seed, "nologo": "true"})
     url = f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}?{query}"
-    for attempt in range(5):
+    for attempt in range(4):
+        wait = IMAGE_INTERVAL - (time.time() - _last_image_request)
+        if wait > 0:
+            time.sleep(wait)
+        _last_image_request = time.time()
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "asadius-reels"})
-            with urllib.request.urlopen(req, timeout=180) as resp:
+            with urllib.request.urlopen(req, timeout=120) as resp:
                 data = resp.read()
             if len(data) > 10_000:
                 path.write_bytes(data)
                 return True
         except Exception as e:  # noqa: BLE001
-            print(f"::warning::rasm xatosi ({attempt + 1}/5): {e}")
-        time.sleep(15 * (attempt + 1))
+            print(f"::warning::rasm xatosi ({attempt + 1}/4): {e}")
     return False
 
 
