@@ -7,6 +7,7 @@ on:
       - "src/**"
       - "scripts/**"
       - "public/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 permissions:
